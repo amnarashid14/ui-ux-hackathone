@@ -1,0 +1,52 @@
+import React from 'react'
+
+const ProductGrid = () => {
+    const products = [
+      { id: 1, name: 'Comfort Handy Craft', price: '$42.00', discount: '$65.00', img: '/image/lp1.png '},
+      { id: 2, name: 'Comfort Handy Craft', price: '$46.00', discount: '$68.00', img: '/image/lp2.png ', isSale: true },
+      { id: 3, name: 'Comfort Handy Craft', price: '$41.00', discount: '$60.00', img: '/image/lp3.png ' },
+      { id: 4, name: 'Comfort Handy Craft', price: '$42.00', discount: '$65.00', img: '/image/lp4.png ' },
+      { id: 5, name: 'Comfort Handy Craft', price: '$48.00', discount: '$66.00', img: '/image/lp5.png ' },
+      { id: 6, name: 'Comfort Handy Craft', price: '$42.00', discount: '$65.00', img: '/image/lp6.png ' },
+    ];
+  
+        return (
+          <div className="min-h-screen bg-gray-100 p-4">
+            <div className="text-center my-8">
+              <h1 className="text-2xl font-bold">Latest Products</h1>
+              <div className="flex justify-center space-x-4 mt-2">
+                <span className="text-blue-500 font-semibold">New Arrival</span>
+                <span>Best Seller</span>
+                <span>Featured</span>
+                <span>Special Offer</span>
+              </div>
+            </div>
+      
+            <div className="grid gap-6 grid-cols-3 sm:grid-cols-1 sm:grid-rows-6  lg:grid-cols-3">
+              {products.map((product) => (
+                <div key={product.id} className="bg-white p-4 shadow-lg rounded-lg relative">
+                  {product.isSale && (
+                    <div className="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
+                      Sale
+                    </div>
+                  )}
+                  <img
+                    src={product.img}
+                    alt={product.name}
+                    className="w-full h-48 object-cover rounded-md"
+                  />
+                  <h3 className="mt-4 text-lg font-medium">{product.name}</h3>
+                  <div className="flex justify-between items-center mt-2">
+                    <span className="text-blue-500 font-semibold">{product.price}</span>
+                    <span className="line-through text-gray-400">{product.discount}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      }
+      
+
+
+export default ProductGrid

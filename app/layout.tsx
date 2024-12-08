@@ -25,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="preconnect" href="https://fonts.googleapis.com" precedence="default"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='anonymous' precedence="default"/>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet" precedence="default"/>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
