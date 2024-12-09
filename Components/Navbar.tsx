@@ -27,11 +27,11 @@ const Navbar = () => {
       md:hidden
       ">
       <li className="flex color "><Link href='/' className="flex">Home<IoIosArrowDown className='mt-2'/></Link></li>
-      <li className="color"><Link href='/'>Pages</Link></li>
-      <li className="color"><Link href='/'>Products</Link></li>
-      <li className="color"><Link href='/'>Blog</Link></li>
-      <li className="color"><Link href='/'>Shop</Link></li>
-      <li className="color"><Link href='/'>Contact</Link></li>
+      <li className="color"><Link href='/pages'>Pages</Link></li>
+      <li className="color"><Link href='/products'>Products</Link></li>
+      <li className="color"><Link href='/blog'>Blog</Link></li>
+      <li className="color"><Link href='/shop'>Shop</Link></li>
+      <li className="color"><Link href='/about'>Contact</Link></li>
       </ul>
 
 {/* Hamburger Menu */}
@@ -44,18 +44,19 @@ const Navbar = () => {
     <SheetHeader>
       <SheetTitle>Hekto </SheetTitle>
       <SheetDescription>
-      <nav className="flex justify-between  w-2/5 
+      <nav className="flex   w-2/5 
+      justify-between
       md:flex-col md:items-start
       "> 
-      <ul className="">
+      <ul className=" ">
       <li className="flex color "><Link href='/' className="flex">Home<IoIosArrowDown className='mt-2 md:hidden'/></Link></li>
-      <li className="color"><Link href='/'>Pages</Link></li>
-      <li className="color"><Link href='/'>Products</Link></li>
-      <li className="color"><Link href='/'>Blog</Link></li>
-      <li className="color"><Link href='/'>Shop</Link></li>
-      <li className="color"><Link href='/'>Contact</Link></li>
+      <li className="color"><Link href='/pages'>Pages</Link></li>
+      <li className="color"><Link href='/products'>Products</Link></li>
+      <li className="color"><Link href='/blog'>Blog</Link></li>
+      <li className="color"><Link href='/shop'>Shop</Link></li>
+      <li className="color"><Link href='/contact'>Contact</Link></li>
      
-      <li className="  flex w-full justify-end "><input type='search' placeholder={undefined} className='border-2 border-[#E7E6EF] w-2/3 md:w-3/4 sm:w-full'/><PiMagnifyingGlass className='bg-[#FB2E86] text-[38px] p-1 text-[#F3F9FF]'/>
+      <li className="  flex w-full justify-end "><input type='search' placeholder={undefined} className='border-2 border-[#E7E6EF] w-2/3 md:w-full  sm:w-full'/><PiMagnifyingGlass className='bg-[#FB2E86] text-[38px] p-1 text-[#F3F9FF]'/>
       </li>
       </ul>
       </nav>

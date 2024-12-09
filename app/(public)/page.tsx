@@ -7,7 +7,7 @@ export default function Home() {
     <>
     <Header/>
     <Navbar/>
-    <Hero headingOne='Featured Product'/>
+    <Hero headingOne='Featured Product' headingTwo='What Shopex Offer!' headingThree='Trendy Products' headingFour=''/>
     </>
   );
 }

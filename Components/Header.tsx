@@ -5,6 +5,7 @@ import { RiUser3Line } from "react-icons/ri";
 import { FaRegHeart } from "react-icons/fa";
 import { BsCart2 } from "react-icons/bs";
 import { FaRegEnvelope } from "react-icons/fa6";
+import Link from 'next/link';
 const Header = () => {
     return (
         <div className='w-[99vw] bg-[#7E33E0] h-11 flex justify-between px-3 text 
@@ -36,12 +37,12 @@ const Header = () => {
                     <IoIosArrowDown className='mt-[5px]' /></li>
                 <li className="flex gap-[2px]">USD
                     <IoIosArrowDown className='mt-[5px]' /></li>
-                <li className="flex gap-[2px]">Login
-                    <RiUser3Line className='mt-[2px]' /></li>
-                <li className="flex gap-[3px]">Wishlist
-                    <FaRegHeart className='mt-[2px]' /></li>
+                <li ><Link href='/login' className="flex gap-[2px]">Login
+                    <RiUser3Line className='mt-[2px]' /></Link></li>
+                <li ><Link href='/wishlist' className="flex gap-[3px]">Wishlist
+                    <FaRegHeart className='mt-[2px]' /></Link></li>
                 <li className="lg:ml-3">
-                    <BsCart2 /></li>
+                    <Link href='/cart'><BsCart2 /></Link></li>
             </ul>
         </div>
     )

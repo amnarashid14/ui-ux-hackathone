@@ -56,7 +56,8 @@ export default {
 			'md':{'max':"768px"},
 			'lg':{'max':"952px"},
 			'xl':{'max':"1440px"},
-			'2xl':{'max':"2560px"}
+			'2xl':{'max':"1920px"},
+			'3xl':{'max':"2560px"}
 			
 		},
   		borderRadius: {
