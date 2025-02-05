@@ -3,9 +3,51 @@ width: 100vw;
 display: grid;
 grid-template-rows: repeat(1,1fr);
 grid-template-columns: repeat(4,1fr);
+padding-left: 2em;
 
 }
 
+.discountCard{
+width:100vw;
+display: grid; 
+grid-template-columns: repeat(3,1fr);
+gap:1rem;
+justify-content: space-between; 
+margin-top: 3.5rem;
+padding:0.5rem;
+background-color: white;
+}
+
+.clockCard{
+position: relative;
+left:10rem;
+}
+
+.cupBoard{
+position: relative;
+left:7rem;
+width: 19.5rem;
+height: 10.8rem;
+top: 1.5rem;
+}
+
+.chairCard{
+
+display: flex;
+flex-direction: column;
+/* align-items: center; */
+/* gap:1.25rem; */
+justify-content: space-between;
+
+}
+
+#newslaterSec{
+background-image: url('/image/bg-pic.jpeg');
+background-repeat:no-repeat;
+background-position: center;
+background-size: cover;
+/* background-clip: border-box; */
+}
 @media screen and (min-width:1440px) and (max-width:1920px){
 
     /* Hero Text */
@@ -27,7 +69,10 @@ width: 40%;
 #latestProd {
     grid-template-rows: repeat(2,1fr);
     grid-template-columns:repeat(3, 1fr);
-    
+    }               
+    #serviceCard {
+    grid-template-rows: 1fr;
+    grid-template-columns:repeat(4, 1fr);
     }               
 /* What Shopex Offers   */
 #services{
@@ -53,18 +98,54 @@ width: 40%;
         grid-template-columns:repeat(3, 1fr);
         
         }
+     /* Latest Product Grid*/
+     #serviceCard{
+        /* grid-template-rows: repeat(2,1fr); */
+        grid-template-columns:repeat(4, 1fr);
+        
+        }
         /* What Shopex Offers   */
 #services{
     /* grid-template-rows: repeat(2,1fr); */
     grid-template-columns:repeat(2, 1fr);
 }
+.cupBoard{
+left: 1.8rem;
+}
+/* Discount Item  */
+#peech_circle{
+height:80%;
+width: 80%;
+top: 10%;
+left: 21%;
+}
+#dis_sofa{
+top: 10%;
+width:  80%;
+height: 80%;
+left: 21%;
+}
+
+/* Top Catagories  */
+#topCat{
+    grid-template-columns:repeat(4,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    row-gap: 5rem;
+    column-gap: 1rem;
+    }
+    #box{
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 80%;
+
+    }
+    #box button{
+    font-size: 0.75rem;
+    margin:0.25rem;
+    }
 }
 @media screen and (min-width:768px) and (max-width:952px){
-    /* Featured Product */
-
-    #featureprod{
-    grid-template-columns: repeat(3,1fr);
-    }
+  
     /* hero Text  */
 #Hero{
 left: 13rem;
@@ -78,18 +159,80 @@ width: 70vw;
         grid-template-columns:repeat(2, 1fr);
         
         }
+        #serviceCard {
+        /* grid-template-rows: repeat(2,1fr); */
+        grid-template-columns:repeat(2, 1fr);
+        
+        }
+
+
+        #featureprod{
+        grid-template-columns: repeat(3,1fr);
+        row-gap: 1rem;
+        }
+
+
         /* What Shopex Offers   */
 #services{
     grid-template-rows: repeat(2,1fr);
     grid-template-columns:repeat(2, 1fr);
 }
+
+
+   /* Discount Crad */
+   .discountCard{
+
+    grid-template-columns: repeat(3,1fr) ;
+    }
+
+    .clockCard{
+    left:1.3rem;
+}
+.cupBoard{
+    left:1rem;
+}
+
+/* Discount Items  */
+#disc_text{
+width: 70%;
+}
+
+#peech_circle{
+width:85%;
+height:60%;
+left: 7%;
+}
+#dis_sofa{
+width: 90%;
+height:70%;
+left: 5%;
+top: 5%;
+}
+
+/* Top Catagories  */
+#topCat{
+    grid-template-columns:repeat(4,1fr);
+    /* grid-template-rows: repeat(4,1fr); */
+    row-gap: 5rem;
+    column-gap: 1rem;
+    }
+    #box{
+    /* border: 2px solid blue; */
+    width: 100%;
+    height: 65%;
+
+    }
+    #box button{
+    font-size: 0.75rem;
+    margin:0.25rem;
+    }
 }
 @media screen and (min-width:425px) and (max-width:768px){
     /* Featured Product */
     #featureprod{
         grid-template-columns: repeat(2,1fr);
         row-gap:15px;
-        padding-left: 32px;
+        padding-left: 5%;
         }
 
         /* Hero Text  */
@@ -105,17 +248,105 @@ width: 70vw;
         grid-template-columns: repeat(2,1fr);
         
         }
+        #serviceCard {
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+        
+        }
         /* What Shopex Offers   */
 #services{
     /* grid-template-rows: repeat(2,1fr); */
     grid-template-columns:repeat(1, 1fr);
 }
+#trendy{
+grid-template-columns: repeat(2,1fr);
 
 }
+   /* Discount Crad */
+   .discountCard{
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr) ;
+    }
+
+    .chairCard{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    }
+    .clockCard{
+    left:1.3rem;
+    }
+    .cupBoard{
+    left:1rem;
+    }
+
+    /* Discount Item  */
+   #discountItem{
+    /* align-items:center;  */
+    flex-direction: column-reverse;
+    }
+   #disc_text{
+
+width: 100%;
+height: 100%;
+/* border: 2px solid red; */
+font-size: 0.9rem;
+margin-top: 13rem;
+}
+   
+    #picBox{
+    /* border: 2px solid yellow; */
+height: 100%;
+width:90%; 
+/* z-index: -1; */
+
+/* visibility: hidden; */
+    }
+    #peech_circle{
+    width: 10.5rem;
+    /* border: 2px solid black; */
+    height: 10.5rem;
+    left: 30%;
+    top:0;
+    
+    }
+
+    #dis_sofa{
+    width: 11rem;
+    height:11rem;
+    top: 0rem;
+    left: 30%;
+    }
+
+
+            /* Top Catagories  */
+        #topCat{
+            grid-template-columns:repeat(2,1fr);
+            grid-template-rows:repeat(2,1fr);
+            height: 100%;
+            row-gap: 5rem;
+            column-gap: 1rem;
+            /* border: 2px solid blue; */
+            }
+            #box{
+            width: 100%;
+            height: 80%;
+            padding-left: 0;
+
+            }
+            #box button{
+            font-size: 0.75rem;
+            margin:0.25rem;
+            }
+            /* News Letter  */
+            #newslaterSec{
+            margin-top: 6rem;
+            }
+        }
 
 @media screen and (max-width:425px) and (min-width:320px){
 
-
+/* Featured Product  */
     #featureprod{
     grid-template-columns: repeat(1,1fr);
 row-gap:15px ;
@@ -123,10 +354,21 @@ padding-left: 4em;
         }
 
         /* Hero Text  */
+        #mainHero{
+        height:38rem;
+        width: 100vw; 
+        }
     #Hero{
-    top: 23%;
+    top: 35%;
     left:4%;
     width: 100vw;
+    }   
+
+    #latestProd{
+    grid-template-columns: repeat(1,1fr);
+    }
+    #serviceCard{
+    grid-template-columns: repeat(1,1fr);
     }
 
     #services{
@@ -134,13 +376,109 @@ padding-left: 4em;
     
     }
 
-   
+   #trendy{
+    grid-template-columns: repeat(1,1fr);
+
+   }
+   /* Discount Crad */
+  .discountCard{
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: 1fr ;
+    }
+    .clockCard{
+    left:7rem;
+    height:12rem;
+
+    }
+    .cupBoard{
+    left:3rem;
+    height: 12rem;
+    }
+/* Discount Item  */
+    #discountItem{
+        flex-direction: column-reverse;
+    }
+    #disc_text{
+        font-size: 0.9rem;
+        width: 100%;
+        height: 90%;
+        margin-top: 1rem;
+    }
+  #picBox{
+    height:100%;
+    width: 100%;
+    }
+
+    #peech_circle{
+        width:  13rem;
+        height: 13rem;
+        top: 0;
+        left: 9rem;
+    }
+    #dis_sofa{
+        width:  14rem;
+        height: 14rem;
+        left:8.5rem;
+        top:0;
+    }  
+     /* Discount Item  */
+
+       #disc_text{
+    width: 90%;
+    height: max-content;
+    font-size: 1rem;
+    margin-top: 12rem;
+    }
+       
+        #picBox{
+    height: 100%;
+    width:90%;
+        }
+        #peech_circle{
+        width: 10rem;
+        height: 10rem;
+        left: 30%;
+        top: 1rem;
+        }
+    
+        #dis_sofa{
+        width: 12rem;
+        height:12rem;
+        top: 0rem;
+        left: 26%;
+        }
+
+        /* Top Catagories  */
+        #topCat{
+            grid-template-columns:repeat(2,1fr);
+            row-gap: 1rem;
+            column-gap: 1rem;
+            /* border:2px solid yellow; */
+            height: 100%;
+            }
+            #box{
+            /* border: 2px solid blue; */
+            width: 100%;
+
+            }
+            #box button{
+            font-size: 0.75rem;
+            margin:0.25rem;
+            }
+
+             /* News Letter  */
+             #newslaterSec{
+                margin-top: 0rem;
+                /* border:2px solid blueviolet; */
+                }
 }
 @media screen and (max-width:320px){
-    /* Featured Product */
+  #mainHero{
+height: 100vh;
+}
     #Hero{
    left:0%;
-    top: 0;
+    top: 1%;
     width: 100vw;
     padding: 2%; 
     text-align: center;
@@ -150,7 +488,11 @@ padding-left: 4em;
 #latestProd {
 grid-template-rows: repeat(6,1fr);
 grid-template-columns: 1fr;
+}
 
+#serviceCard {
+grid-template-rows: repeat(4,1fr);
+grid-template-columns: 1fr;
 }
 /* What Shopex Offers   */
 #services{
@@ -162,7 +504,30 @@ grid-template-columns: 1fr;
 #featureprod{
     grid-template-columns: repeat(1,1fr);
 row-gap:15px ;
-padding: 2em ;
+/* padding: 2em ; */
         }
+
+        #trendy{
+            grid-template-columns: repeat(1,1fr);
+
+           }
+           /* Discount Crad */
+           .discountCard{
+        grid-template-columns: 1fr;
+        }
+        .clockCard{
+        left:7rem;
+        height:12rem;
+        }
+        .cupBoard{
+        left:3rem;
+        height: 12rem;
+        }
+
+        /* Top Catagories  */
+#topCat{
+grid-template-columns: 1fr;
+grid-template-rows: repeat(4,1fr);
+}
 
 }

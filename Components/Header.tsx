@@ -8,11 +8,12 @@ import { FaRegEnvelope } from "react-icons/fa6";
 import Link from 'next/link';
 const Header = () => {
     return (
-        <div className='w-[99vw] bg-[#7E33E0] h-11 flex justify-between px-3 text 
+        <div className='w-screen bg-[#7E33E0] h-11 flex justify-between px-3 text 
         md:w-screen
         md:flex-col md:items-center 
         md:h-full
         sm:px-0
+        sm:w-screen
         '>
 
 
@@ -20,7 +21,7 @@ const Header = () => {
             <ul className="flex items-center gap-8  w-[40%] 
              lg:justify-start lg:gap-10 
              md:self-end md:w-fit
-             sm:px-4
+             sm:px-4 sm:text-xs
             ">
                 <li className=" font-semibold text-base flex gap-3 sm:text-xs sm:text-center"> <FaRegEnvelope className='mt-[3px]' /> mhhasanul@gmail.com</li>
                 <li className=" font-semibold text-base flex gap-3 sm:text-xs sm:text-center">
@@ -31,7 +32,7 @@ const Header = () => {
             <ul className=" flex items-center w-[40%] justify-between 
             
     md:gap-2 md:self-start
-    sm:w-screen  sm:gap-4
+    sm:w-screen  sm:gap-4 sm:text-xs
             ">
                 <li className="flex gap-[2px]">English
                     <IoIosArrowDown className='mt-[5px]' /></li>

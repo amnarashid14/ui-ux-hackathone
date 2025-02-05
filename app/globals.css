@@ -7,7 +7,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-
+scroll-behavior: smooth;
 }
 
 @layer base {
@@ -90,6 +90,9 @@ color: #F1F1F1;
 .textOne{
   color:#FB2E86;
 }
+.textTwo{
+color: #1A0B5B;
+}
 .subText{
 color: #8A8FB9;
 }
@@ -123,12 +126,79 @@ background-size: contain;
 background-repeat: no-repeat;
 
 }
+.upper{
+visibility: visible;
+}
 
 
 
-.Product-Card{
-background-image: url('/image/fp2.png');
-background-repeat: no-repeat;
-background-size: contain;
+
+.Hov{
+visibility: visible;
 
 }
+
+.one{
+/* visibility: hidden; */
+height:8.5rem;
+border-bottom-left-radius: 7px;
+border-bottom-right-radius: 7px;
+
+
+}
+/* .two{
+visibility: hidden;
+} */
+.Hov:hover{
+
+.one{
+  visibility: visible;
+  background-color:#2F1AC4 ;
+}
+.two{
+  color: #F1F1F1;
+  visibility: visible;
+}
+.upper-one{
+visibility: visible;
+}
+}
+
+.shadow-bg{
+
+}
+
+.shadow-bg:hover{
+box-shadow: 2px 4px;
+
+}
+
+.view-btn{
+visibility: hidden;
+}
+
+.hove:hover{
+
+.div-btn{
+  box-shadow: 4px 8px  #32208a9f;
+
+}
+.view-btn{
+visibility: visible;
+
+}
+
+/* Latest Blog  */
+.blog-head {
+  color:#FB2E86;
+  
+  }
+
+
+.blog-btn{
+color:#FB2E86;
+
+}
+
+}
+

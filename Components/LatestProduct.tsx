@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '@/styles/ProductCard.module.css'
+import Link from 'next/link';
 const ProductGrid = () => {
   const products = [
     { id: 1, name: 'Comfort Handy Craft', price: '$42.00', discount: '$65.00', img: '/image/lp1.png ' },
@@ -11,24 +12,36 @@ const ProductGrid = () => {
   ];
 
   return (
+
+
     <div className="min-h-screen  p-4 mt-4">
+
       <div className="text-center my-8">
-      <h1 className="text-center my-7 text-[#1A0B5B] text-[42px]">
+
+        {/*Heading */}
+      <h1 className="text-center my-7 text-[#1A0B5B] text-[42px] font-bold">
  Latest Product
 </h1>
+
+       {/*Navbar */}
         <div className="flex justify-center space-x-4 mt-2 sm:text-sm">
-          <span className=" font-semibold text-[#FB2E86]">New Arrival</span>
-          <span>Best Seller</span>
-          <span>Featured</span>
-          <span>Special Offer</span>
+          <Link href='/' className=" font-semibold color">New Arrival</Link>
+          <Link href='/' className='color'>Best Seller</Link>
+          <Link href='/' className='color'>Featured</Link>
+          <Link href='/' className='color'>Special Offer</Link>
         </div>
       </div>
 
       <div className="grid gap-6 
       3xl:grid-cols-3 3xl:grid-rows-2
       " id={styles.latestProd}>
+
+        {/*using map method  */}
         {products.map((product) => (
+
+
           <div key={product.id} className="bg-white p-4 shadow-lg rounded-lg relative">
+            {/* Sale  */}
             {product.isSale && (
               <div className="absolute top-2 left-2 bg-blue-500 text-white text-xs px-2 py-1 rounded">
                 Sale
@@ -37,7 +50,7 @@ const ProductGrid = () => {
             <img
               src={product.img}
               alt={product.name}
-              className="w-full h-48 object-cover rounded-md"
+              className="w-full h-48 object-contain rounded-md"
             />
             <h3 className="mt-4 text-lg font-medium">{product.name}</h3>
             <div className="flex justify-between items-center mt-2">

@@ -1,32 +1,49 @@
 import React from 'react'
-import Image from 'next/image'
-type Properties ={
-    source :string ,
-   heading :string ,
-   desc :string ,
-}
-const ServiceCard = ({source, heading, desc}:Properties) => {
+import styles from '@/styles/ProductCard.module.css'
+const ServiceCard = () => {
+  const products = [
+    { id: 1, name: '24/7 Support',  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.', img: '/image/icon1.png ' },
+    { id: 2, name: '24/7 Support',  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.', img: '/image/icon2.png  ', isSale: true },
+    { id: 3, name: '24/7 Support', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.', img: '/image/icon3.png ' },
+    { id: 4, name: '24/7 Support',description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.', img: '/image/icon4.png  ' },
+  ];
+
+
+  
   return (
-//     <div className=' w-[270px] h-[320px]'>
-//       <Image src={props.source} width={100} height={100} alt='Loading' className='w-[65px] h-[65px] '/>
-
-//       <h1 className="text-center text-[#1A0B5B] ">
-//   {props.heading}
-// </h1>
-
-// <p className="lato-bold text-base text-[#1A0B5B4D]">{props.desc}</p>
-//     </div>
-
-<div className="bg-white p-6 shadow-md rounded-lg flex flex-col items-center text-center">
-<Image src={source} width={80} height={80} alt={heading} className="mb-4" />
-<h3 className="text-lg font-semibold text-blue-900">{heading}</h3>
-<p className="text-gray-500 mt-2 text-sm">{desc}</p>
-</div>
 
 
+    <div className="min-h-max  p-4 mt-4  mb-2 ">
 
+      <div className="grid gap-6 
+      3xl:grid-cols-4 place-items-center 
+      p-3 
+      " id={styles.serviceCard}>
 
-  )
+        {products.map((product) => (
+
+          <div key={product.id} className="bg-white p-4 shadow-lg rounded-lg relative  flex flex-col justify-center items-center ">
+            
+            <img
+              src={product.img}
+              alt={product.name}
+              className="w-1/4 h-48  object-contain rounded-md "
+            />
+
+            <h3 className="mt-1 text-xl font-bold text-[#151875] mb-3">{product.name}</h3>
+
+            <div className="flex justify-between items-center mt-2">
+              <span className="text-base font-bold text-center text-gray-400">{product.description}</span>
+
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
+
+
 
 export default ServiceCard
+

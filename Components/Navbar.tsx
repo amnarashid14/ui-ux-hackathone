@@ -14,8 +14,9 @@ import {
 const Navbar = () => {
   return (
     <>
-    <div className='w-[99vw] heading leading-[34px] flex justify-between items-center py-6
+    <div className='w-screen heading leading-[34px] flex justify-between items-center py-6
     md:justify-between
+    
     '>
       {/* Logo */}
       <div className="font-bold text-[34px] w-[10%]
@@ -34,7 +35,7 @@ const Navbar = () => {
       <li className="color"><Link href='/about'>Contact</Link></li>
       </ul>
 
-{/* Hamburger Menu */}
+{/* Hamburger Menu for small screens */}
 
       <ul className="hidden md:flex order-3 ">
         <li className="">
@@ -44,22 +45,21 @@ const Navbar = () => {
     <SheetHeader>
       <SheetTitle>Hekto </SheetTitle>
       <SheetDescription>
-      <nav className="flex   w-2/5 
-      justify-between
+      <div className="flex   w-full 
+      justify-start
       md:flex-col md:items-start
       "> 
-      <ul className=" ">
-      <li className="flex color "><Link href='/' className="flex">Home<IoIosArrowDown className='mt-2 md:hidden'/></Link></li>
-      <li className="color"><Link href='/pages'>Pages</Link></li>
-      <li className="color"><Link href='/products'>Products</Link></li>
-      <li className="color"><Link href='/blog'>Blog</Link></li>
-      <li className="color"><Link href='/shop'>Shop</Link></li>
-      <li className="color"><Link href='/contact'>Contact</Link></li>
      
-      <li className="  flex w-full justify-end "><input type='search' placeholder={undefined} className='border-2 border-[#E7E6EF] w-2/3 md:w-full  sm:w-full'/><PiMagnifyingGlass className='bg-[#FB2E86] text-[38px] p-1 text-[#F3F9FF]'/>
-      </li>
-      </ul>
-      </nav>
+      <Link href='/' className="flex color ">Home<IoIosArrowDown className='mt-2 md:hidden'/></Link>
+      <Link href='/pages' className="color">Pages</Link>
+      <Link href='/products' className="color">Products</Link>
+      <Link href='/blog' className="color">Blog</Link>
+      <Link href='/shop' className="color">Shop</Link>
+      <Link href='/contact' className="color">Contact</Link>
+     
+      <div className="  flex w-full justify-end "><input type='search' placeholder={undefined} className='border-2 border-[#E7E6EF] w-full  md:w-full  sm:w-full'/><PiMagnifyingGlass className='bg-[#FB2E86] text-[38px] p-1 text-[#F3F9FF]'/>
+      </div>
+         </div>
 
       </SheetDescription>
     </SheetHeader>
