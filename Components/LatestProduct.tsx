@@ -1,6 +1,6 @@
 import React from 'react'
-import styles from '@/styles/ProductCard.module.css'
 import Link from 'next/link';
+import Image from 'next/image'
 const ProductGrid = () => {
   const products = [
     { id: 1, name: 'Comfort Handy Craft', price: '$42.00', discount: '$65.00', img: '/image/lp1.png ' },
@@ -33,8 +33,8 @@ const ProductGrid = () => {
       </div>
 
       <div className="grid gap-6 
-      3xl:grid-cols-3 3xl:grid-rows-2
-      " id={styles.latestProd}>
+      grid-cols-3 grid-rows-2
+      latestProd" >
 
         {/*using map method  */}
         {products.map((product) => (
@@ -47,7 +47,7 @@ const ProductGrid = () => {
                 Sale
               </div>
             )}
-            <img
+            <Image height={100} width={100}
               src={product.img}
               alt={product.name}
               className="w-full h-48 object-contain rounded-md"

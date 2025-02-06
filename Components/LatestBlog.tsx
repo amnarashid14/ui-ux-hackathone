@@ -1,17 +1,10 @@
 import React from 'react'
-import styles from "@/styles/ProductCard.module.css"
 import { FaPenNib } from "react-icons/fa";
 import { LuCalendarDays } from "react-icons/lu";
 import Link from 'next/link';
+import Image from 'next/image';
 
-type dataType={
-  id: number,    
-      img:string ,
-      author:string, 
-      date:string, 
-      head:string,
-      text: string,  
-}
+
 function LatestBlog() {
   const blogPost = [
     { 
@@ -41,12 +34,13 @@ function LatestBlog() {
   ];
   return (
 
-<div className="w-screen h-[30.9rem] grid  grid-cols-3 pl-24 sm:grid-cols-1 sm:pl-2 
-md:grid-cols-1 md:pl-6 md:gap-y-5 md:h-[80rem]" >
+<div className="w-screen h-[30.9rem] grid  grid-cols-3 pl-24 
+sm:grid-cols-1 sm:pl-0 
+md:grid-cols-1 md:pl-6 lg:pl-2  md:gap-y-5 md:h-[80rem] " >
 {blogPost.map((post)=>(
-  <div key={post.id} className="w-5/6 h-full  flex flex-col  hove justify-between md:h-96">
+  <div key={post.id} className="w-5/6 h-full  flex flex-col  hove justify-between md:h-96 sm:w-11/12 sm:h-full ">
     {/* Image  */}
-<img src={post.img} alt='Loading' className='w-full h-1/2  rounded-lg shadow-xl'/>
+<Image src={post.img} alt='Loading' height={100} width={100} className='w-full h-1/2  rounded-lg shadow-xl '/>
 {/* Writer  */}
   <div className=" flex ">
      <span className="flex text-sm ">

@@ -1,7 +1,7 @@
 import React from 'react'
 import { FaCheck } from "react-icons/fa6";
 import { FaCircle } from 'react-icons/fa';
-import styles from '@/styles/ProductCard.module.css'
+import Image from 'next/image'
 const DiscountItems = () => {
   return (
   <section className="w-[98vw] pl-2 h-screen sm:hidden  ">
@@ -15,9 +15,9 @@ const DiscountItems = () => {
 
           </div>
   
-          <div className="w-[97vw]  h-full flex items-center justify-around"  id={styles.discountItem}>
+          <div className="w-[97vw]  h-full flex items-center justify-around discountItem"  >
 
-            <div className=" w-[43%] h-4/6 flex flex-col  justify-around" id={styles.disc_text}>
+            <div className=" w-[43%] h-4/6 flex flex-col  justify-around disc_text" >
               <h1 className='textTwo text-[2.24rem] leading-[2.89rem]' >20% Discount Of All Products</h1>
               <p className="textOne text-[1.26rem] leading-[1.73rem] tracking-widest">Eams Sofa Compact</p>
               <p className="text-[#B7BACB]">
@@ -35,11 +35,11 @@ const DiscountItems = () => {
             </div>
 
 
-            <div className="w-1/2 h-full  relative  " id={styles.picBox}>
+            <div className="w-1/2 h-full  relative  picBox" >
 {/* <div className="" > */}
-                <div className="rounded-full h-[25.5rem] w-[25.5rem] bg-[#FCECF1] absolute z-0 top-[3.5rem] left-[8rem]" id={styles.peech_circle}></div>
+                <div className="rounded-full h-[25.5rem] w-[25.5rem] bg-[#FCECF1] absolute z-0 top-[3.5rem] left-[8rem]  peech_circle" ></div>
 
-                <img src='/image/tortuga-01-b 1.png' width={100} height={100} alt='Sofa Picture ' className='absolute z-10  w-[43.5rem] h-[33rem] left-7 ' id={styles.dis_sofa}/>
+                <Image src='/image/tortuga-01-b 1.png' width={100} height={100} alt='Sofa Picture ' className='absolute z-10  w-[43.5rem] h-[33rem] left-7 dis_sofa' />
 
               </div>
 

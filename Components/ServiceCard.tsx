@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import React from 'react'
-import styles from '@/styles/ProductCard.module.css'
 const ServiceCard = () => {
   const products = [
     { id: 1, name: '24/7 Support',  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa purus gravida.', img: '/image/icon1.png ' },
@@ -15,16 +15,16 @@ const ServiceCard = () => {
 
     <div className="min-h-max  p-4 mt-4  mb-2 ">
 
-      <div className="grid gap-6 
-      3xl:grid-cols-4 place-items-center 
+      <div className="grid serviceCard gap-6 
+      place-items-center 
       p-3 
-      " id={styles.serviceCard}>
+      ">
 
         {products.map((product) => (
 
           <div key={product.id} className="bg-white p-4 shadow-lg rounded-lg relative  flex flex-col justify-center items-center ">
             
-            <img
+            <Image width={100} height={100}
               src={product.img}
               alt={product.name}
               className="w-1/4 h-48  object-contain rounded-md "
